@@ -88,24 +88,30 @@
   ].filter(c => c.el);
   if (!counters.length) return;
 
+  const animated = new Set();
+  const dur = 1800;
+  const ease = t => 1 - Math.pow(1 - t, 3);
+
+  function animateCounter(c) {
+    if (animated.has(c.el)) return;
+    animated.add(c.el);
+    const start = performance.now();
+    (function frame(now) {
+      const p = Math.min(1, (now - start) / dur);
+      c.el.textContent = Math.floor(ease(p) * c.value).toLocaleString('en-US');
+      if (p < 1) requestAnimationFrame(frame);
+      else c.el.textContent = c.value.toLocaleString('en-US');
+    })(performance.now());
+  }
+
   const io = new IntersectionObserver(es => {
     es.forEach(e => {
       if (!e.isIntersecting) return;
-      io.disconnect();
-
-      const dur = 1800;
-      const ease = t => 1 - Math.pow(1 - t, 3);
-      const start = performance.now();
-      (function frame(now) {
-        const p = Math.min(1, (now - start) / dur);
-        const k = ease(p);
-        counters.forEach(c => c.el.textContent = Math.floor(k * c.value).toLocaleString('en-US'));
-        if (p < 1) requestAnimationFrame(frame);
-        else counters.forEach(c => c.el.textContent = c.value.toLocaleString('en-US'));
-      })(performance.now());
+      const c = counters.find(c => c.el === e.target);
+      if (c) animateCounter(c);
     });
-  }, { threshold: 0.3 });
-  io.observe(counters[0].el.closest('.bento-grid'));
+  }, { threshold: 0.1 });
+  counters.forEach(c => io.observe(c.el));
 })();
 
 /* ============ Growth bar fills ============ */

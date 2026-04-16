@@ -2,6 +2,21 @@
    Grace Erixon — v3 scripts
    ========================================================= */
 
+/* ============ Email hydration (anti-scraper obfuscation) ============ */
+function getEmail() {
+  const el = document.querySelector('[data-mailto]');
+  if (!el) return '';
+  return el.dataset.u + '@' + el.dataset.d;
+}
+(() => {
+  document.querySelectorAll('[data-mailto]').forEach(a => {
+    const addr = a.dataset.u + '@' + a.dataset.d;
+    a.setAttribute('href', 'mailto:' + addr);
+    const text = a.querySelector('[data-mailto-text]');
+    if (text) text.textContent = addr;
+  });
+})();
+
 /* ============ Terminal clock ============ */
 (() => {
   const el = document.getElementById('termClock');
@@ -423,10 +438,10 @@ document.getElementById('year').textContent = new Date().getFullYear();
     { kind: 'nav',    label: 'Go to Beyond',       action: () => go('#beyond') },
     { kind: 'nav',    label: 'Go to Education',    action: () => go('#education') },
     { kind: 'nav',    label: 'Go to Contact',      action: () => go('#contact') },
-    { kind: 'action', label: 'Email Grace',         action: () => location.href = 'mailto:grace.erixon@gmail.com' },
+    { kind: 'action', label: 'Email Grace',         action: () => location.href = 'mailto:' + getEmail() },
     { kind: 'action', label: 'Open LinkedIn',       action: () => window.open('https://www.linkedin.com/in/grace-erixon-vrbka-904143146/', '_blank') },
     { kind: 'action', label: 'Copy email address', action: async () => {
-      try { await navigator.clipboard.writeText('grace.erixon@gmail.com'); flash('email copied'); }
+      try { await navigator.clipboard.writeText(getEmail()); flash('email copied'); }
       catch { flash('copy failed'); }
     }},
   ];

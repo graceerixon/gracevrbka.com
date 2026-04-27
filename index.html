@@ -138,34 +138,40 @@
         </div>
         <h2 class="tile-title">
           Superb Shifts<span class="tt-dot">.</span>
-          <span class="tt-sub">A two-sided healthcare staffing platform I've been fortunate enough to help build and scale.</span>
+          <span class="tt-sub">A two-sided healthcare staffing platform serving 15,010 users and 158 senior living facilities.</span>
         </h2>
+        <!-- [changed: subtitle now states scale directly instead of "fortunate enough to help build"] -->
 
         <p class="tile-desc">
-          Workers onboard from their phone. Facilities post shifts. Compliance, payments, and communication handled end-to-end. I joined as a full-stack engineer, was promoted to CTO 18 months in, and have been the sole engineer since October 2025. I still write code every day, owning architecture, infrastructure, security, ongoing maintenance, and new feature development end-to-end.
+          Own all infrastructure, frontend, backend, security, and new feature development. Joined as a full-stack engineer, promoted to CTO 18 months in, sole engineer since October 2025.
         </p>
+        <!-- [changed: shorter, leads with ownership scope, removes "I still write code every day" and "end-to-end" repetition] -->
 
         <div class="feat-cards">
           <div class="fc">
             <span class="fc-letter">A</span>
-            <h4>Worker onboarding</h4>
-            <p>Signup to shift-ready, all from a phone. Dynamic multi-step forms, document upload and in-browser PDF signing, license verification with multi-state tracking, emergency contacts, and tax consent. Built on React Hook Form and Azure Blob Storage.</p>
+            <h4>UI and onboarding</h4>
+            <p>Redesigned and refactored the UI across three user types (facilities, healthcare workers, admins) and iteratively overhauled the onboarding flow based on real user friction. Migrated all views to a consistent component library for visual and functional parity.</p>
           </div>
+          <!-- [changed: was "Worker onboarding" focused on tech (React Hook Form, Azure Blob). Now leads with what you actually did: redesigned across user types, iterated on friction, migrated to consistent library. Matches your resume bullet.] -->
           <div class="fc">
             <span class="fc-letter">B</span>
-            <h4>Compliance engine</h4>
-            <p>Regulatory rules for <strong>52 state requirements</strong> encoded as data. Ready Health background checks, skills checklists, WV CARES, TB, influenza/MMR, and compliance briefcase PDFs for facility audits. <strong>86,726 documents</strong> managed, <strong>3,081 background checks</strong> processed, and <strong>46,592 expiration reminders</strong> sent, all tracked and audited automatically.</p>
+            <h4>Email and comms</h4>
+            <p>Designed an email marketing system from scratch: SendGrid on the backend, MJML responsive templates, a React Email Editor drag-and-drop builder on the frontend, and audience segmentation. Integrated a multi-channel communication layer spanning Stream Chat, Stream Video, Firebase push notifications, Twilio SMS, and SendGrid.</p>
           </div>
+          <!-- [changed: was two separate cards (Compliance engine + Realtime comms). Combined email marketing + multi-channel into one card since they're both about communication. Compliance moved to a new card below.] -->
           <div class="fc">
             <span class="fc-letter">C</span>
-            <h4>Subcontractor portal</h4>
-            <p>A new product line I designed and shipped end-to-end. <strong>20+ agency-facing pages</strong> plus admin counterparts, a full NestJS backend module, state contract management, and dedicated RBAC. Third-party agencies onboard, manage workers, and track placements through the platform. Opened a new revenue channel for the business.</p>
+            <h4>Admin and ops tooling</h4>
+            <p>Grew the admin tooling to support 15,000+ user records at scale: worker search and filtering, shift metrics dashboards, event logging, user impersonation for debugging, bulk messaging, and PostHog analytics with feature flags. Optimized data-heavy pages with virtualized rendering and lightweight API endpoints.</p>
           </div>
+          <!-- [changed: was "Compliance engine" with healthcare-specific numbers. Replaced with admin tooling bullet from your resume — shows you build operational tools, not just user-facing features.] -->
           <div class="fc">
             <span class="fc-letter">D</span>
-            <h4>Realtime comms</h4>
-            <p>Chat, video, push, SMS, and email through one pipeline, built on Stream, Firebase, Twilio, and SendGrid. The channel matches the urgency.</p>
+            <h4>Subcontractor portal</h4>
+            <p>Identified an opportunity to bring third-party staffing agencies onto the platform as a new revenue channel. Built the portal end-to-end: full NestJS backend module, role-based access control, and contract management.</p>
           </div>
+          <!-- [changed: removed "20+ agency-facing pages" count and "state contract management" detail. Simpler, leads with the business initiative angle.] -->
         </div>
 
         <div class="feat-stack">
@@ -342,14 +348,16 @@
       <div class="tk-col">
         <div class="tk-head"><span class="tk-dot"></span> Daily drivers</div>
         <ul>
-          <li><a href="https://www.typescriptlang.org/" target="_blank" rel="noopener"><span>TypeScript</span><em>7y</em></a></li>
-          <li><a href="https://react.dev/" target="_blank" rel="noopener"><span>React</span><em>7y</em></a></li>
-          <li><a href="https://nextjs.org/" target="_blank" rel="noopener"><span>Next.js</span><em>4y</em></a></li>
-          <li><a href="https://nestjs.com/" target="_blank" rel="noopener"><span>NestJS</span><em>2y</em></a></li>
-          <li><a href="https://www.postgresql.org/" target="_blank" rel="noopener"><span>PostgreSQL</span><em>2y</em></a></li>
-          <li><a href="https://www.postgresql.org/docs/current/sql.html" target="_blank" rel="noopener"><span>SQL</span><em>2y</em></a></li>
-          <li><a href="https://www.prisma.io/" target="_blank" rel="noopener"><span>Prisma</span><em>2y</em></a></li>
-          <li><a href="https://tailwindcss.com/" target="_blank" rel="noopener"><span>Tailwind CSS</span><em>2y</em></a></li>
+          <li><a href="https://www.typescriptlang.org/" target="_blank" rel="noopener"><span>TypeScript</span></a></li>
+          <li><a href="https://react.dev/" target="_blank" rel="noopener"><span>React</span></a></li>
+          <li><a href="https://nextjs.org/" target="_blank" rel="noopener"><span>Next.js</span></a></li>
+          <li><a href="https://nestjs.com/" target="_blank" rel="noopener"><span>NestJS</span></a></li>
+          <li><a href="https://nodejs.org/" target="_blank" rel="noopener"><span>Node.js</span></a></li>
+          <li><a href="https://expressjs.com/" target="_blank" rel="noopener"><span>Express</span></a></li>
+          <li><a href="https://www.postgresql.org/" target="_blank" rel="noopener"><span>PostgreSQL</span></a></li>
+          <li><a href="https://www.postgresql.org/docs/current/sql.html" target="_blank" rel="noopener"><span>SQL</span></a></li>
+          <li><a href="https://www.prisma.io/" target="_blank" rel="noopener"><span>Prisma</span></a></li>
+          <li><a href="https://tailwindcss.com/" target="_blank" rel="noopener"><span>Tailwind CSS</span></a></li>
         </ul>
       </div>
       <div class="tk-col">
@@ -362,6 +370,9 @@
           <li><a href="https://react-hook-form.com/" target="_blank" rel="noopener"><span>React Hook Form</span></a></li>
           <li><a href="https://fullcalendar.io/" target="_blank" rel="noopener"><span>FullCalendar</span></a></li>
           <li><a href="https://recharts.org/" target="_blank" rel="noopener"><span>Recharts</span></a></li>
+          <li><span>REST API design</span></li>
+          <li><a href="https://graphql.org/" target="_blank" rel="noopener"><span>GraphQL</span></a></li>
+          <li><a href="https://vuejs.org/" target="_blank" rel="noopener"><span>Vue.js</span></a></li>
         </ul>
       </div>
       <div class="tk-col">
@@ -373,6 +384,7 @@
           <li><a href="https://capacitorjs.com/" target="_blank" rel="noopener"><span>Capacitor (iOS + Android)</span></a></li>
           <li><a href="https://reactnative.dev/" target="_blank" rel="noopener"><span>React Native</span></a></li>
           <li><a href="https://jestjs.io/" target="_blank" rel="noopener"><span>Jest + Testing Library</span></a></li>
+          <li><a href="https://www.docker.com/" target="_blank" rel="noopener"><span>Docker</span></a></li>
         </ul>
       </div>
       <div class="tk-col">
@@ -409,18 +421,23 @@
           <span class="by-role-chip">President</span>
         </div>
         <h4 class="by-title">Mystery Code Society</h4>
-        <p>Volunteer since 2017, on the board since 2020 (previously Treasurer for three years and Vice President for one). A nonprofit bringing coding to underrepresented youth in Omaha. Led initiatives to grow social media, redesign the website, and build partnerships with other nonprofits and businesses.</p>
+        <p>President of a nonprofit teaching coding to underrepresented youth in Omaha, overseeing community partnerships, class organization, and new initiatives while guiding annual planning and financial decisions. On the board since 2020 (previously Treasurer for 3 years, Vice President for 1 year).</p>
         <ul class="by-bullets">
-          <li>Authored curriculum for four courses: Intro to HTML, Intro to JavaScript, JavaScript Games, and Intro to Graphic Design</li>
-          <li>Taught two JavaScript courses and volunteered in the classroom for five total</li>
-          <li>Developed strategies to create more accessible courses</li>
+          <li>Wrote curriculum for four courses: Web Dev I, Web Dev II, JavaScript I, and JavaScript Game Development</li>
+          <li>Taught or assisted in seven course sessions</li>
         </ul>
       </article>
 
       <article class="by-tile by-slim">
         <div class="by-kind">Advisory Board</div>
         <h4 class="by-title">Millard Public Schools · STEM Advisory</h4>
-        <p>Advise on Millard's STEM Academy program, sharing industry trends, workforce development needs, and partnership opportunities. Hear directly from students on their coursework. 2022 → present.</p>
+        <p>Advise on Millard's STEM Academy program, sharing industry trends and workforce development needs with educators, while hearing directly from students on their experience with the curriculum. 2022 → present.</p>
+      </article>
+
+      <article class="by-tile by-slim">
+        <div class="by-kind">Women's ERG Lead</div>
+        <h4 class="by-title">WP Engine · ROAR Omaha Chapter</h4>
+        <p>Led the Omaha chapter of WP Engine's women's employee resource group, organizing service projects and social events while serving on the Omaha Community Council for company-wide initiatives. 2022 → 2024.</p>
       </article>
 
       <article class="by-tile by-wide">
@@ -526,11 +543,6 @@
 </div>
 
 <script src="script.js"></script>
-
-<!-- Analytics: GoatCounter (free, no cookies, privacy-friendly)
-     1. Sign up at https://www.goatcounter.com (free for personal use)
-     2. Replace YOUR-CODE below with your site code
-     3. Dashboard will be at https://YOUR-CODE.goatcounter.com -->
 <script data-goatcounter="https://gracevrbka.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

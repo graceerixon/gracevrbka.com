@@ -1005,7 +1005,7 @@ body.swapping .swap-text { opacity: 0; filter: blur(3px); }
 .by-wide     { grid-column: span 12; }
 .by-half     { grid-column: span 6; }
 .by-featured {
-  grid-column: span 8;
+  grid-column: span 12;
   position: relative;
   border-color: var(--border-hi);
   background: linear-gradient(140deg, var(--panel-hi), var(--panel));
@@ -1020,7 +1020,7 @@ body.swapping .swap-text { opacity: 0; filter: blur(3px); }
   background: radial-gradient(380px circle at 95% 0%, rgba(6, 182, 212, 0.08), transparent 55%);
   pointer-events: none;
 }
-.by-slim     { grid-column: span 4; }
+.by-slim     { grid-column: span 6; }
 @media (max-width: 900px) {
   .by-tile, .by-half, .by-featured, .by-slim { grid-column: span 12; }
 }
